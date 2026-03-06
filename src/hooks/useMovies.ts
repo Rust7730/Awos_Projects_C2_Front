@@ -13,7 +13,7 @@ export const useMovies = () => {
         setError(null);
 
         try {
-           const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
+           const apiUrl = process.env.NEXT_PUBLIC_API_URL ;
             const response = await fetch(`${apiUrl}/api/movies?query=...`);
             if (!response.ok) {
                 throw new Error('No se pudo conectar con el servidor Proxy');

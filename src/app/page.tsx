@@ -26,8 +26,8 @@ export default function Home() {
   const handleSaveFavorite = async (movie: Movie) => {
 
         try {
-            console.log("Enviando petición al Proxy en localhost:3001...");
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000',
+            console.log("Enviando petición al Proxy en ...");
+const apiUrl = process.env.NEXT_PUBLIC_API_URL ,
 response = await fetch(`${apiUrl}/api/favorites`, {
                 
               method: 'POST',
