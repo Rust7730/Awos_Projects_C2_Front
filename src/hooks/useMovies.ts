@@ -14,8 +14,7 @@ export const useMovies = () => {
 
         try {
            const apiUrl = process.env.NEXT_PUBLIC_API_URL ;
-            const response = await fetch(`${apiUrl}/api/movies?query=...`);
-            if (!response.ok) {
+const response = await fetch(`https://moviehub-omega-lilac.vercel.app/api/movies?query=${query}`);            if (!response.ok) {
                 throw new Error('No se pudo conectar con el servidor Proxy');
             }
             

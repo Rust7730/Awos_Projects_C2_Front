@@ -12,8 +12,7 @@ export const useFavorites = () => {
 
         try {
 const apiUrl = process.env.NEXT_PUBLIC_API_URL ;
-const response = await fetch(`${apiUrl}/api/movies?query=...`);
-
+const response = await fetch('https://moviehub-omega-lilac.vercel.app/api/favorites');
             if (!response.ok) throw new Error('Error de red con el Proxy');
             
             const result = await response.json();
